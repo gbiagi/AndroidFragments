@@ -66,7 +66,7 @@ public class DashboardFragment extends Fragment {
         };
 
         // Seleccionem el tipus de sensor (veure doc oficial)
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sensorManager = (SensorManager) requireContext().getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
         // registrem el Listener per capturar els events del sensor
